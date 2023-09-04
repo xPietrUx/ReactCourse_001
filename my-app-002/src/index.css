@@ -1,0 +1,42 @@
+* {
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: gray;
+  color: black;
+}
+
+.booklist {
+  width: 90%;
+  max-width: 1170px;
+  margin: 5rem auto;
+  display: grid;
+  gap: 2rem;
+}
+
+@media screen and (min-width:768px) {
+  .booklist {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.book {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.book img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.book h2{
+  margin-top: 1rem;
+  font-size: 1rem;
+}
