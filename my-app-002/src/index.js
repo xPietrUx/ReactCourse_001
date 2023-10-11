@@ -16,30 +16,16 @@ const books = [
   },
 ]
 
-/*
-const Author = () => {
-
-  const inlineHeadingStyles = {
-    color: '#617d98',
-    fontSize: '0.75rem',
-    marginTop: '0.5rem'
-  };
-  return <h2 style={inlineHeadingStyles}>Rebecca Yarros</h2>
-};
-const Title = () => <h2 style={{ color: "black" }}>Iron Flame (The Empyrean, 2)</h2>;
-const Image = () => <img src="https://images-na.ssl-images-amazon.com/images/I/A1FW1G46+aL._AC_UL600_SR600,400_.jpg" alt="" />;
-*/
-
-/*
-const Image = 'https://images-na.ssl-images-amazon.com/images/I/A1FW1G46+aL._AC_UL600_SR600,400_.jpg';
-const Title = 'Iron Flame (The Empyrean, 2)';
-const Author = 'Rebecca Yarros';
-*/
+const names = ['john', 'peter', 'susan'];
+const newNames = names.map((name)=>{
+  return <h1>{name}</h1>;
+})
+console.log(newNames);
 
 const BookList = () => {
   return (
     <section className="booklist">  
-    {books}
+    {newNames}
     </section>
   );
 };
