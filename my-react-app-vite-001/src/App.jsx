@@ -1,4 +1,4 @@
-import Starter from './tutorial/01-useState/starter/01-error-example';
+import Starter from './tutorial/01-useState/starter/02-useState-basics';
 import Final from './tutorial/01-useState/final/01-error-example';
 
 function App() {
