@@ -1,5 +1,20 @@
+import { useState } from "react";
+
 const UseStateBasics = () => {
-  return <h2>useState basics</h2>;
+
+  const [plusOne, setPlusOne] = useState(0);
+
+  const increaseNumber = () =>
+  {
+    setPlusOne(plusOne + 1);
+  }
+
+  return (
+    <div>
+        <h3>Your number is {plusOne}</h3>
+        <button type="button" className="btn" onClick={increaseNumber}>Increase number by one</button>
+    </div>
+  );
 };
 
 export default UseStateBasics;
