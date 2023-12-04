@@ -22,10 +22,10 @@ const UseStateArray = () => {
         const {id, name} = person;
         //console.log(person)
         return(
-          <div key={id}>
+          <li key={id}>
           <h4>{name}</h4>
           <button type="button" className="btn" onClick={() => removeItem(id)}>Remove</button>
-          </div>
+          </li>
         );
       })}
     </ul>
