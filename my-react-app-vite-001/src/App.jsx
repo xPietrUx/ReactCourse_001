@@ -1,12 +1,10 @@
-import Final from './tutorial/01-useState/final/01-error-example';
-import Navbar from './tutorial/04-project-structure/starter/navbar';
+import {Home, About} from "./tutorial/04-project-structure/starter/Pages";
 
 function App() {
   return (
     <div className='container'>
-      {/* <Starter/> */}
-      <Navbar/>
-      {/* <Final/> */}
+      <Home/>
+      <About/>
     </div>
   );
 }
