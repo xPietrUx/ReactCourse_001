@@ -1,6 +1,9 @@
+import avatar from '../../../assets/default-avatar.svg';
 import React from "react";
-export function Person({name, nickName, images}) {
-    const img = images[0].small.url;
+export function Person({name, nickName = 'default value', images}) {
+
+    // if exits then or set default
+    const img = images?.[0]?.small?.url || avatar;
 
     return (
         <div>
