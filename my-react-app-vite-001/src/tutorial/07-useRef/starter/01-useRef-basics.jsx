@@ -3,8 +3,27 @@ import { useEffect, useRef, useState } from 'react';
 const UseRefBasics = () => {
   const [value, setValue] = useState(0);
 
+  const refContainer = useRef(null);
+  console.log(refContainer);
+  const isMounted = useRef(false);
+
+  useEffect(() => {
+    refContainer.current.focus();
+  });
+
+  useEffect(() => {
+    console.log(isMounted);
+    if(!isMounted.current){
+      isMounted.current = true;
+      return
+    }
+    console.log('re-render');
+  }, [value]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    const name = refContainer.current.value;
+    console.log(name);
   };
 
   return (
@@ -14,7 +33,8 @@ const UseRefBasics = () => {
           <label htmlFor='name' className='form-label'>
             Name
           </label>
-          <input type='text' id='name' className='form-input' />
+          <input type='text' id='name' className='form-input' 
+          ref={refContainer}/>
         </div>
         <button type='submit' className='btn btn-block'>
           submit
