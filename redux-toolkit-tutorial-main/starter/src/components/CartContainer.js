@@ -2,7 +2,7 @@ import CartItem from './CartItem';
 import { useSelector } from 'react-redux';
 
 const CartContainer = () => {
-  const { cartItems, total, amount } = useSelector((store) => store.cart);
+  const { cartItem, total, amount } = useSelector((store) => store.cart);
   if (amount < 1) {
     return (
       <section className='cart'>
@@ -20,7 +20,7 @@ const CartContainer = () => {
         <h2>Your bag</h2>
       </header>
       <div>
-        {cartItems.map((item) => {
+        {cartItem.map((item) => {
           return <CartItem key={item.id} {...item} />;
         })}
       </div>
