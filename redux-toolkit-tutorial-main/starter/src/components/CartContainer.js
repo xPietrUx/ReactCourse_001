@@ -26,7 +26,12 @@ const CartContainer = () => {
       </div>
       <footer>
         <hr />
-        <h4></h4>
+        <div className='cart-total'>
+          <h4>
+            Total <span>${total}</span>
+          </h4>
+        </div>
+        <button className='btn clear-btn'>Clear cart</button>
       </footer>
     </section>
   );
